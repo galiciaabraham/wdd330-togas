@@ -108,6 +108,31 @@ nav ul.open {
     display: none;
 }
 
+/*Shared styling between pages*/
+
+main {
+    background-color: #B9B353;
+}
+
+main p {
+    font-family: 'Noto Sans', 'sans-serif';
+}
+
+main ul {
+    font-family: 'Heebo', 'serif';
+    font-size: 2rem;
+}
+
+main li {
+    font-family: 'Noto Sans', 'sans-serif';
+    font-size: 1.5rem;
+    list-style: none;
+}
+
+main h1 main h2 main h3 {
+    font-family: 'Heebo', 'serif';
+    font-size: 2rem;
+}
 /*Portfolio page styling*/
 main.portfolio-page{
     background-color: #B9B353;
