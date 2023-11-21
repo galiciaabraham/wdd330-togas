@@ -137,6 +137,7 @@ h2 {
 }
 
 .page-title {
+    display: block;
     text-align: center;
     color: #FBFBF2;
 }
@@ -188,6 +189,35 @@ main.portfolio-page{
     text-align: center;
 }
 
+.prices {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #023A75;
+    color: #f6f7eb;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    margin: 1rem;
+}
+
+.prices picture {
+    display: none;
+}
+
+.prices ul {
+    padding: 0;
+    margin: 3rem;
+}
+
+.prices ul li {
+    margin: 1rem;
+    background-color:#E5E6E4;
+    color: #283618;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    padding: 0;
+}
+
+
 
 
 /*Footer Styling*/
@@ -230,7 +260,7 @@ footer p{
         gap: 1rem;
     }
     /*Portfolio Styling*/
-    /* .portfolio-page {
+    .portfolio-page {
         grid-template-columns: repeat(3, minmax(300px,1fr));
     }
     .page-title {
@@ -254,7 +284,24 @@ footer p{
         grid-column: 1/4;
         width: 100%;
         margin: 0 auto;
-    } */
+    }
+
+    /*Prices page Styling*/
+
+    .prices {
+        grid-template-columns: 1fr 1fr;
+    }
+    .prices picture {
+        display: block;
+        margin: 3rem;
+    }
+
+    .prices picture img {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        border-radius: 5px;
+        width: 80%;
+
+    }
 }
 /*LARGE SCREEN VIEW*/
 @media screen and (min-width: 64em){
