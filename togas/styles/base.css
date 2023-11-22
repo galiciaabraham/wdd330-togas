@@ -259,16 +259,93 @@ main.portfolio-page{
     display: none;
 }
 
-.contact-button {
+button {
     transition: 200ms;
     display: block;
     background-color: #f6f7eb;
     color: #283618;
     padding: 1rem;
     font-family: 'Heebo', 'serif';
-    margin: 0 auto;
+    margin: 1rem auto;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 5px;
+}
+
+/*Form Page Styling*/
+
+form {
+    margin: 2rem .5rem;
+}
+
+form fieldset {
+    margin: 2rem 1rem ;
+    border: 4px dotted #283618;
+    border-radius: 5px;
+
+}
+
+form legend {
+    color: #283618;
+    margin: 0 1rem;
+    padding: .3rem .5rem;
+    font-weight: 800;
+    background-color: #E5E6E4;
+    font-family: 'Heebo', 'serif';
+    font-size: 1.5rem;
+}
+
+form label.contact , form label.pick {
+    display: block;
+    padding: .5rem .5rem;
+    font-weight: 400;
+    font-family: 'Noto Sans', 'sans-serif';
+    font-size: 1.2rem;
+
+}
+
+form label.contact input {
+    display: block;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: solid 3px black;
+    padding: 1rem;
+    width: 70%;
+    max-width: 25rem;
+    background-color: rgba(0, 0, 0, .1);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+}
+
+textarea {
+    width: 60%;
+    height: 10rem;
+    min-width: 300px;
+    max-width: 70%;
+    min-height: 100px;
+    max-height: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+    border-radius: 5px;
+
+}
+
+
+textarea::placeholder {
+    padding: 1rem 1rem;
+    font-weight: 400;
+    font-family: 'Noto Sans', 'sans-serif';
+    font-size: 1.2rem;
+}
+
+
+form label.contact input:required {
+    border-left: rgb(153, 51, 51) solid 5px;
+}
+
+form label.contact input:required:valid {
+    border-left: green solid 5px ;
+}
+
+.form-button {
+    font-size: 1.2rem;
 }
 /*Footer Styling*/
 
@@ -309,6 +386,7 @@ footer p{
     #primary-nav {
         display: flex;
         gap: 1rem;
+        justify-content: space-around;
     }
     /*Portfolio Styling*/
     .portfolio-page {
@@ -382,11 +460,10 @@ footer p{
         grid-row: 1/5;
     }
 
-    .contact-button:hover {
+    button:hover {
         background-color: #283618;
         color: #f6f7eb;
         transition: 200ms;
-        margin: 0 auto;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         border-radius: 5px;
     }

@@ -1,0 +1,21 @@
+{
+    "services": 
+    [ 
+        {
+            "service1":"Description 1",
+            "message": "At European Gowns, we tell your story. Record your success and life transformation through our lenses. Whether its your personal session, your friends and you creating memories, or your group or school, we include our magic in each frame with passion and professionalism. Come with us and create the memories you'll never forget.",
+            "services": 
+            {
+            "portraits": "From families to individuals, our portraits are authentic and full of love.",
+            "events": "Small, medium, and large graduations, proms, and parties.",
+            "specialsessions": "Do you have an idea in mind? Just tell us the details and we'll do it!"
+            },
+            "strenghts":
+            {
+            "reliability": "Our +20 years of experience is our backup.",
+            "personalbusiness": "We consider every photo a uniquely important task.",
+            "affordability": "Compare our prices with the market! "
+            }
+        }
+    ] 
+}

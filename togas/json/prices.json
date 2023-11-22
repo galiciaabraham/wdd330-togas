@@ -1,0 +1,41 @@
+{"fees": 
+    [
+        {
+            "packagename":"Self Package",
+            "price":"25.00",
+            "quantityincluded":"3",
+            "specialpictures":"no"
+        },
+        {
+            "packagename":"Friends Package",
+            "price":"120.00",
+            "quantityincluded":"25",
+            "specialpictures":"no"
+        },
+        {
+            "packagename":"Small Group Package",
+            "price":"220.00",
+            "quantityincluded":"50",
+            "specialpictures":"no"
+        },
+        {
+            "packagename":"Medium Group Package",
+            "price":"500.00",
+            "quantityincluded":"150",
+            "specialpictures":"yes"
+        },
+        {
+            "packagename":"Big Group Package",
+            "price":"1000.00",
+            "quantityincluded":"500",
+            "specialpictures":"no"
+        },
+        {
+            "packagename":"School Bundle",
+            "price":"2000.00",
+            "quantityincluded":"1500",
+            "specialpictures":"yes"
+        }
+
+    ]
+}

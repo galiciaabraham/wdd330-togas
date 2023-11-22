@@ -1,0 +1,21 @@
+{
+    "contact":
+    [
+        {
+            "information1":
+            {
+                "address": "123 Shutter Lane, Apt 4B Pictureville, CA 98765",
+                "phone number 1": "123 123-4567",
+                "phone number 2": "987 654-3210",
+                "email": "contact@europeangowns.com"
+            },
+            "information2":
+            {
+                "address": "123 Frame St, 321 Tripod Ave, UT 98254",
+                "phone number 1": "123 173-8455",
+                "phone number 2": "987 612-8810",
+                "email": "contact@togaseuropa.com"
+            }
+        }
+    ]
+}
