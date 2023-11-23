@@ -8,3 +8,9 @@ export function hamburgerMenu() {
         navBox.classList.toggle("open");
     })
 }
+const yearBoxDefault = document.querySelector(".current-year");
+export function getCurrentYear(box = yearBoxDefault){ 
+    let year = new Date().getFullYear();
+    box.textContent = `${year}`;
+
+}

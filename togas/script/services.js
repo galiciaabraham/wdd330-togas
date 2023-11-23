@@ -1,3 +1,3 @@
-import { hamburgerMenu } from "./utils.mjs";
-
+import { hamburgerMenu, getCurrentYear } from "./utils.mjs";
+getCurrentYear();
 hamburgerMenu();

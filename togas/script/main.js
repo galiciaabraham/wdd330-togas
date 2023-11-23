@@ -1,3 +1,5 @@
-import { hamburgerMenu } from "./utils.mjs";
+import { hamburgerMenu, getCurrentYear } from "./utils.mjs";
 
+const yearBox = document.querySelector(".current-year");
+getCurrentYear(yearBox);
 hamburgerMenu();
