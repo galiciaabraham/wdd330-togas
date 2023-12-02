@@ -4,6 +4,6 @@ export async function getDataFromJSON(jsonFile){
         const data = await res.json();
         return data;
     } else {
-        console.error(error);
+        console.log(res);
     }
 }
