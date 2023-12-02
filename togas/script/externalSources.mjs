@@ -1,9 +1,14 @@
 export async function getDataFromJSON(jsonFile){
-    let res = await fetch(jsonFile);
-    if (res.ok){
-        const data = await res.json();
-        return data;
-    } else {
-        console.log(res);
-    }
+    let response = await fetch(jsonFile);
+    let result = convertToJson(response);
+    return result;
 }
+
+function convertToJson(res) {
+    if (res.ok) {
+      return res.json();
+    } else {
+      throw new Error("Bad Response");
+    }
+  }
+  
