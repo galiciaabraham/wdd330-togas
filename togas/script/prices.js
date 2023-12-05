@@ -3,6 +3,14 @@ import { getDataFromJSON } from "./externalSources.mjs";
 getCurrentYear();
 hamburgerMenu();
 
-const pricesJSONFile = "https://galiciaabraham.github.io/wdd330/togas/json/services.json";
+const pricesJSONFile = "https://galiciaabraham.github.io/wdd330-togas/togas/json/prices.json";
 
-console.log(getDataFromJSON(pricesJSONFile));
+const pricesList = document.querySelector(".prices-list");
+
+let pricesListData = await getDataFromJSON(pricesJSONFile);
+
+let pricesArray = pricesListData.fees;
+
+pricesArray.forEach(element => {
+    pricesList.insertAdjacentHTML("beforeend", `<li>${element.packagename} .......... ${element.price}</li> `);
+});;
