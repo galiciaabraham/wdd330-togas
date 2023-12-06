@@ -1,6 +1,6 @@
 {
     "contact":
-    [
+    
         {
             "information1":
             {
@@ -17,5 +17,5 @@
                 "email": "contact@togaseuropa.com"
             }
         }
-    ]
+    
 }

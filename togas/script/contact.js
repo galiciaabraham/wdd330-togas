@@ -13,7 +13,7 @@ const contactBox = document.querySelector(".contact-info");
 
 const contactInfoJSONFile = "https://galiciaabraham.github.io/wdd330-togas/togas/json/contactDetails.json";
 
-let contactInfo = getDataFromJSON(contactInfoJSONFile);
+let contactInfo = await getDataFromJSON(contactInfoJSONFile);
 
 contactBox.innerHTML = `<li>Address: ${contactInfo.contact.information1.address}</li>
 <li>Phone Number 1: ${contactInfo.contact.information1.phonenumber1}</li>
