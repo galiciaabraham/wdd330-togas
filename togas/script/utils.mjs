@@ -14,3 +14,20 @@ export function getCurrentYear(box = yearBoxDefault){
     box.textContent = `${year}`;
 
 }
+
+export function getLocalStorage(key) {
+    return JSON.parse(localStorage.getItem(key));
+  }
+
+function setLocalStorage(key, data) {
+    localStorage.setItem(key, JSON.stringify(data));
+  }
+
+export function firstTimeVisit(){
+    let firstVisit = getLocalStorage("first-visit");
+    if(firstVisit == "" || firstVisit == null){
+        setLocalStorage("first-visit","no");
+    } else {
+        setLocalStorage("first-visit", "yes");
+    }
+}
