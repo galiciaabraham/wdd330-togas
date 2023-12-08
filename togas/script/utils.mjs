@@ -25,7 +25,8 @@ function setLocalStorage(key, data) {
 
 export function firstTimeVisit(renderCard){
     let firstVisit = getLocalStorage("first-visit");
-    if(firstVisit == "" || firstVisit == null){
+    //firstVisit = "yes"; //For testing only.
+    if(firstVisit == "" || firstVisit == null || firstVisit == "yes"){
         setLocalStorage("first-visit","yes");
         renderCard();
     } else {

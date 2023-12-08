@@ -148,6 +148,47 @@ h2 {
     color: #FBFBF2;
 }
 
+/*First Time Visit Pop Up styling*/
+
+  .modal {
+    animation: blowUp 0.5s ease-out;
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+    width: 50%;
+    padding: 1.3rem;
+    min-height: 250px;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: #E5E6E4;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    z-index: 2;
+    text-align: center;
+  }
+  
+  .modal button.close {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    padding: 1rem;
+  }
+  
+  .modal section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .modal section h2 {
+    margin: 1rem;
+  }
+
+  p.welcome-message {
+    font-family: 'Noto Sans', 'sans-serif';
+    font-size: 1.2rem;
+  }
 /*Portfolio page styling*/
 main.portfolio-page{
     background-color: #B9B353;
