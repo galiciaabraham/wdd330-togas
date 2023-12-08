@@ -23,11 +23,12 @@ function setLocalStorage(key, data) {
     localStorage.setItem(key, JSON.stringify(data));
   }
 
-export function firstTimeVisit(){
+export function firstTimeVisit(renderCard){
     let firstVisit = getLocalStorage("first-visit");
     if(firstVisit == "" || firstVisit == null){
-        setLocalStorage("first-visit","no");
+        setLocalStorage("first-visit","yes");
+        renderCard();
     } else {
-        setLocalStorage("first-visit", "yes");
+        setLocalStorage("first-visit", "no");
     }
 }
