@@ -6,7 +6,7 @@ hamburgerMenu();
 
 // e.target would contain our form in this case
 document.forms["contact-form"].addEventListener("submit", (e) => {
-    //e.preventDefault();
+    e.preventDefault();
     let myForm = document.forms[0];
     let check_status = myForm.checkValidity();
     myForm.reportValidity();
@@ -15,6 +15,7 @@ document.forms["contact-form"].addEventListener("submit", (e) => {
         console.log(e.target);
         const jsonForm = formDataToJSON();
         setLocalStorage("formData", jsonForm);
+        window.location = "../contact/success.html";
     }
   });
 
