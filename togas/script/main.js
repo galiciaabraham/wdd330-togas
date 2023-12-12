@@ -1,5 +1,5 @@
 import { hamburgerMenu, getCurrentYear, firstTimeVisit, getLocalStorage } from "./utils.mjs";
-import { getPhotos } from "./portfolio.mjs";
+//import { getPhotos } from "./portfolio.mjs";
 
 const yearBox = document.querySelector(".current-year");
 getCurrentYear(yearBox);
@@ -7,7 +7,7 @@ hamburgerMenu();
 firstTimeVisit(renderFirstTimeCard);
 
 
-await getPhotos("graduation");
+//await getPhotos("graduation");
 
 async function renderFirstTimeCard() {
   
