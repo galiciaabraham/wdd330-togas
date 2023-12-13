@@ -1,13 +1,10 @@
 import { hamburgerMenu, getCurrentYear, firstTimeVisit, getLocalStorage } from "./utils.mjs";
-import { getPhotos } from "./portfolio.mjs";
+import { filterPhotos } from "./portfolio.mjs";
 
 const yearBox = document.querySelector(".current-year");
 getCurrentYear(yearBox);
 hamburgerMenu();
 firstTimeVisit(renderFirstTimeCard);
-
-
-await getPhotos();
 
 async function renderFirstTimeCard() {
   
@@ -43,3 +40,16 @@ async function renderFirstTimeCard() {
       document.body.removeChild(overlay);
     }
   }
+
+  const photosContainer = document.querySelector(".portfolio");
+  const photos = await filterPhotos();
+
+  photos.forEach(photo => {
+    photosContainer.insertAdjacentHTML("beforeend",`<picture class="picture-1">
+    <img src="${photo.webformatURL}" 
+    alt="This is a graduation picture">
+    </picture>`);  
+  });
+  
+
+
