@@ -37,12 +37,11 @@ function getRandomIndex(list){
 }
 
 function checkRepeated(list,id){
-    let currentId = id;
     list.map((element)=>{
-        if(element.id == currentId){
-            return true;
+        if(element.id == id){
+            return "repeated";
         } else {
-            return false;
+            return "ok";
         }
     })
 }
@@ -53,7 +52,7 @@ async function getPhotosWithQuery(url, limit){
     let photossrcs = photosList.hits;
         while(limitNumber(newPhotosList, limit)){
             let selectedPhoto = photossrcs[getRandomIndex(photossrcs)];
-            if(checkRepeated(newPhotosList,selectedPhoto.id)){
+            if(checkRepeated(newPhotosList,selectedPhoto.id) == "repeated"){
                 selectedPhoto = photossrcs[getRandomIndex(photossrcs)];
             } else {
             newPhotosList.push(selectedPhoto);

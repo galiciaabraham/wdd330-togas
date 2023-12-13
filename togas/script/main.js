@@ -1,4 +1,4 @@
-import { hamburgerMenu, getCurrentYear, firstTimeVisit, getLocalStorage } from "./utils.mjs";
+import { hamburgerMenu, getCurrentYear, firstTimeVisit } from "./utils.mjs";
 import { filterPhotos } from "./portfolio.mjs";
 
 const yearBox = document.querySelector(".current-year");
@@ -42,14 +42,41 @@ async function renderFirstTimeCard() {
   }
 
   const photosContainer = document.querySelector(".portfolio");
-  const photos = await filterPhotos();
 
+  function clear(parentElement){
+    while(parentElement.firstChild){
+      parentElement.removeChild(parentElement.firstChild);
+    }
+  }
+
+  async function renderPhotos(query,limit = 4 ){
+  let photos = await filterPhotos(query,limit);
   photos.forEach(photo => {
     photosContainer.insertAdjacentHTML("beforeend",`<picture class="picture-1">
     <img src="${photo.webformatURL}" 
     alt="This is a graduation picture">
     </picture>`);  
   });
+  }
+  let gradBnt = document.querySelector(".grad-btn");
+  let ceremBtn = document.querySelector(".cerem-btn");
+  let portBtn = document.querySelector(".port-btn");
+  
+  gradBnt.addEventListener("click", () =>{ 
+    console.log("clicked");
+    clear(photosContainer);
+    renderPhotos("graduation")});
+  ceremBtn.addEventListener("click", () =>{ 
+    clear(photosContainer);
+    console.log("clicked");
+    renderPhotos("ceremony")});
+  portBtn.addEventListener("click", () =>{ 
+    clear(photosContainer);
+    renderPhotos("portrait")
+    console.log("clicked");});
+
+
+
   
 
 
