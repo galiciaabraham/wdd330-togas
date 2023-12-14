@@ -61,6 +61,8 @@ async function renderFirstTimeCard() {
   let gradBnt = document.querySelector(".grad-btn");
   let ceremBtn = document.querySelector(".cerem-btn");
   let portBtn = document.querySelector(".port-btn");
+
+  renderPhotos("graduation");
   
   gradBnt.addEventListener("click", () =>{ 
     console.log("clicked");
